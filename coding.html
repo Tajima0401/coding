@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Casteria</title>
+    
+    <style>
+
+.container {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+       
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            background-color: #333; 
+            padding: 20px; 
+            color: black; 
+        }
+        nav {
+            display: flex;
+            flex-grow: 1; 
+            justify-content: flex-end; 
+            
+    
+        }
+        nav ul {
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            font-size: 18px;
+        }
+        nav ul li {
+            margin: 0 18px; 
+        }
+        nav ul li a {
+            color:  black; 
+            text-decoration: none; 
+            padding: 10px; 
+        }
+        nav ul li a:hover {
+            background-color: darkgrey; 
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+        .search-container {
+            display: flex; 
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 5px; 
+            border: none; 
+            border-radius: 5px; 
+        }
+        .search-container button {
+            padding: 5px 10px; 
+            background-color: #555; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #777; 
+        }
+
+        .nav-list {
+    display: flex; 
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+
+        @media (max-width: 768px) {
+    .nav-list {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background-color: white;  
+        width: 100%;
+        z-index: 1; 
+    }
+
+    .nav-list.active {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+}
+        
+        .swiper {
+            width: 100%;
+            height: 500px; 
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            background-color: #ddd;
+            height: 100%; 
+            padding: 0;
+            margin: 0;
+        }
+        .swiper-slide img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px;
+            background-color: lightgray; 
+        }
+
+        h1 {
+            margin: 0; 
+        }
+        form {
+            display: flex; 
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px; 
+        }
+        input[type="submit"] {
+            padding: 10px 15px;
+            cursor: pointer; 
+        }
+
+       
+        .content {
+            display: none; 
+            margin-top: 10px; 
+            background-color: #f0f0f0; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            transition: opacity 10s ease, max-height 10s ease;
+
+        
+        
+            
+        }
+        .image-container {
+            display: flex;
+             
+           
+            margin-left: 260px;
+            height: 300px; 
+            
+            width: 2000px; 
+        }
+
+        img {
+            width: 500px; 
+            height: 400px; 
+            transition: transform 0.3s; 
+            
+            margin-top: 20px;
+        }
+        
+        .text {
+            margin-left: 80px;
+           margin-top: 60px;
+        }
+
+        .image-container2 {
+            display: flex;
+           
+            margin-left: 260px;
+            height: 300px; 
+            
+            width: 100%;
+        }
+        
+        image-container3 {
+            display: flex;
+             
+           
+            margin-left: 260px;
+            height: 300px; 
+            
+            width: 100%; 
+        }
+
+        .container {
+    display: flex;
+    background-color: black; 
+    color: white;
+    padding: 20px;
+    width: 900px; 
+    margin-top: 200px;
+    align-items: flex-start; 
+}
+
+.text2 {
+    flex: 1; 
+    text-align: left;
+    padding: 0; 
+    margin: 0; 
+    width: auto; 
+}
+
+        h6 {
+            font-size: 20px; 
+            
+        }
+
+        h7{
+            font-size: 20px; 
+            margin: 0;
+        }
+        .image {
+            max-width: 400px; 
+            height: auto; 
+        }
+
+        .image-container4 {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+        }
+
+.image-item {
+    margin: 10px; 
+    width: 200px; 
+    font-size: 15px;
+    text-align: center; 
+}
+
+.round-image {
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+    <header>
+        <h1>Cateria</h1>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="file:///C:/Users/soich/Downloads/coding_advanced/coding.html#">Home</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Drink</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active'); 
+        });
+    </script>
+
+   
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="interior.jpg" alt="Image 1"></div>
+            <div class="swiper-slide"><img src="restaurant.jpg" alt="Image 2"></div>
+            <div class="swiper-slide"><img src="food.jpg" alt="Image 3"></div>
+            <div class="swiper-slide"><img src="food2.jpg" alt="Image 4"></div>
+        </div>
+       
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 2, 
+            spaceBetween: 0, 
+            speed: 600,
+            autoplay: {
+                delay: 3000, 
+                disableOnInteraction: false, 
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true, 
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false, 
+            },
+        });
+    </script>
+
+<h2>新型コロナウイルスに対する取り組みの最新情報をご案内</h2>
+<div class="toggleBox" id="box1">■衛生面に関して</div>
+<div class="hiddenText" id="hiddenText1">
+    ・マスクを着用しての接客<br>
+    ・出勤前の検温の徹底<br>
+    ・レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置<br>
+    ・より頻度の高い手洗いの励行<br>
+    ・テーブルにお客様用の消毒用アルコールの設置<br>
+    ・従業員間の距離確保のため、休憩や研修時の客席利用<br>                   
+    </div>
+
+<div class="toggleBox" id="box2">■お客様へのご協力のお願い</div>
+<div class="hiddenText" id="hiddenText2">
+    ・店内では、飲食以外のマスク着用をお願いいたします<br>
+    ・入店時の手指の消毒にご協力ください<br>
+    ・レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください<br>
+    ・多数でお越しの際は、お１人がまとめてご注文願います（混雑時に入場制限をする場合がございます）<br>
+    ・発熱や体調不良の際はご入店をお控えください<br>
+    </div>
+
+<div class="toggleBox" id="box3">■サービスに関して</div>
+<div class="hiddenText" id="hiddenText3">
+    ・直接お渡しする商品の提供、金銭授受時にグローブの着用<br>
+    ・ドリンクやフードのサンプリング中止<br>
+    ・地域活動・イベントの中止<br>
+    ・混雑時間帯の客席の譲り合いへのご協力お願いの実施<br>
+    ・店内設置しているミルク、はちみつ、パウダー類の一時引き下げ<br>
+    ・混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限<br>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBoxes = document.querySelectorAll('.toggleBox');
+
+    toggleBoxes.forEach((box, index) => {
+        box.addEventListener('click', function() {
+            const hiddenText = document.getElementById(`hiddenText${index + 1}`);
+
+            if (hiddenText.style.maxHeight) {
+                hiddenText.style.maxHeight = null; 
+                hiddenText.style.opacity = 0; 
+                setTimeout(() => {
+                    hiddenText.style.display = 'none'; 
+                }, 300);
+            } else {
+                hiddenText.style.display = 'block'; 
+                hiddenText.style.maxHeight = hiddenText.scrollHeight + 'px';
+                hiddenText.style.opacity = 1; 
+            }
+        });
+    });
+});
+
+
+    </script>
+<br>
+<h3 class="fade-in">Signature Food</h3>
+    <div class="image-container fade-in">
+        <img src="food.jpg" alt="syake">
+        <p class="text">
+            サーモンは刺身やカルパッチョで食べるのが美味しいで<br>
+            すが、リッチな気分になれるサーモンステーキがおすす<br>
+            めです。サーモンの美味しさを引き立てる２種のソース<br>
+            も絶品です！
+        </p>
+    </div>
+
+    <h4 class="fade-in">Our Coffee</h4>
+    <div class="image-container fade-in">
+        <img src="barista.jpg" alt="coffee">
+        <p class="text">
+            当店のコーヒー豆が厳選して世界中から買い付けていま<br>
+            す。そして、そのコーヒー豆のおいしさを最大限に引き<br>
+            出すために自社のロースタリーで焙煎しています。<br>
+        </p>
+    </div>
+
+    <h5 class="fade-in">Our Food</h5>
+    <div class="image-container fade-in">
+        <img src="food3.jpg" alt="food">
+        <p class="text">
+            当店は何よりまずは衛生管理に気をつけています。「安<br>
+            全・安心」をお届けするために日々継続的な努力を惜し<br>
+            みません。<br>
+        </p>
+    </div>
+
+    <div class="container fade-in">
+        <div class="text2">
+            <h6>Address</h6>
+            <br>
+            <p>681 xxx Drive, xxxx xxxx #01 - 06 000000<br>
+               Opening Hours </p>
+               <br>
+            <h7>Mondays - Friday: 10am - 9pm</h7><br>
+            <br>
+            <p>Saturdays,Sundays & Public Holidays: 9am - 9pm</p>
+        </div>
+        <img src="barista.jpg" alt="説明文" class="image">
+    </div>
+
+    <div class="custom-heading fade-in">店舗一覧</div>
+    <div class="image-container4 fade-in">
+        <div class="image-item">
+            <img src="restaurant2.jpg" alt="画像1" class="round-image">
+            <p>東京都渋谷区xxxxxx xxxxx</p>
+        </div>
+        <div class="image-item">
+            <img src="restaurant3.jpg" alt="画像2" class="round-image">
+            <p>千葉県松戸市xxxxx xxxxx</p>
+        </div>
+        <div class="image-item">
+            <img src="restaurant4.jpg" alt="画像3" class="round-image">
+            <p>神奈川県横浜市xxxxx xxxx</p>
+        </div>
+        <div class="image-item">
+            <img src="restaurant5.jpg" alt="画像4" class="round-image">
+            <p>埼玉県川越市xxxxx xxxx</p>
+        </div>
+    </div>
+<footer class="footer">
+    <ul class="footer-links">
+        <li><a href="/privacy">プライバシーポリシー</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+        <li><a href="/company">運営会社</a></li>
+    </ul>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(window).on('scroll', function() {
+    $('.fade-in').each(function() {
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop() + $(window).height();
+        
+        if (position < scroll) {
+            $(this).addClass('show');
+        }
+    });
+});
+
+
+$(document).ready(function() {
+    $('.fade-in').each(function() {
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop() + $(window).height();
+        
+        if (position < scroll) {
+            $(this).addClass('show');
+        }
+    });
+});
+</script>
+
+
+</body>  
+<html></html>

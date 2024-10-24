@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    background-color: #FFEFD5;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .element {
+        font-size: 14px; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+h1 {
+    font-size: 60px; 
+}
+
+h2 {
+	font-size: 40px; 
+	text-align: center;
+}
+
+
+p {
+	line-height: 1.6;
+	margin-bottom: 15px; 
+}
+
+.header{
+	font-size: 40px;
+	margin-left: 80px;
+            margin-top: 20px;
+}
+
+
+	
+	body {
+		font-family: Arial, sans-serif;
+	}
+	
+	.toggleBox {
+		cursor: pointer;
+		margin: 5px auto;
+		margin-left: 240px;
+		line-height: 1.5;
+		padding: 15px 15px 15px 30px;
+		width: 1000px;
+		background-color: #FFC7AF;
+		color: black;
+		border-radius: 5px;
+		font-size: 20px;
+		text-align: left;
+		transition: background-color 0.3s ease;
+	}
+
+	
+
+	.toggleBox:hover {
+		background-color: #FF9F7E; 
+	}
+	
+	.hiddenText {
+		max-height: 0; 
+		overflow: hidden; 
+		transition: max-height 0.8s ease, opacity 0.8s ease; 
+		opacity: 0; 
+		display: none; 
+		margin-left: 240px;
+		line-height: 50px;
+	}
+
+	h3 {
+		text-align: center; 
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 50px; 
+		margin-bottom: 10px;
+		margin-right:800px;
+	}
+
+	
+	h4 {
+		text-align: center; 
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 200px; 
+		margin-bottom: 10px;
+		margin-right:800px;
+	}
+
+	h5 {
+		text-align: center; 
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 200px; 
+		margin-bottom: 10px;
+		margin-right:800px;
+	}
+   
+	.custom-heading {
+		display: block;
+		margin-top: 20px;
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.footer {
+		background-color: darkgray; 
+		padding: 20px; 
+	
+	}
+	
+	.footer-links {
+		list-style-type: none; 
+		padding: 0; 
+	    text-align: center;
+		margin: 0;
+	}
+	
+	.footer-links li {
+		display: inline; 
+		margin: 0 15px; 
+	}
+	
+	.footer-links a {
+		text-decoration: none; 
+		font-size: 15px;
+		color: black; 
+	}
+	
+	.footer-links a:hover {
+		text-decoration: underline; 
+		color: white; 
+	}
+
+	.fade-in {
+		opacity: 0;
+		transition: opacity 2s ease;
+	}
+	
+	.fade-in.show {
+		opacity: 1;
+	}
