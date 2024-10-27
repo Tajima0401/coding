@@ -32,6 +32,8 @@
             display: flex;
             flex-grow: 1; 
             justify-content: flex-end; 
+            align-items: center;
+            width: 100px;
             
     
         }
@@ -51,13 +53,14 @@
             padding: 10px; 
         }
         nav ul li a:hover {
-            background-color: darkgrey; 
+            background-color: darkgray; 
             transition: background-color 0.3s ease;
             border-radius: 5px;
         }
         .search-container {
             display: flex; 
             align-items: center;
+            margin-left: 20px;
         }
         .search-container input[type="text"] {
             padding: 5px; 
@@ -79,6 +82,9 @@
         .nav-list {
     display: flex; 
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
 }
 
 .nav-list li {
@@ -89,6 +95,9 @@
     display: none; 
     flex-direction: column;
     cursor: pointer;
+    position: absolute; /* 絶対配置 */
+    right: 20px; /* 右端からの距離 */
+    top: 20px; /* ヘッダーの上端からの距離 */
 }
 
 .menu-toggle .bar {
@@ -98,28 +107,73 @@
     margin: 3px 0;
 }
 
-
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-list {
-        display: none; 
-        flex-direction: column; 
-        position: absolute;
-        top: 60px; 
-        left: 0;
-        background-color: white;  
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        z-index: 1; 
+        position: absolute; 
+        right: 0; 
+        background-color: lightgray; 
+        top: 60px; 
+        z-index: 10; 
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 1.5s ease; 
+        padding: 10px 0; 
+    }
+    
+    .nav-list li {
+        padding: 10px 20px; 
+    }
+
+    .nav-list li:hover {
+        background-color: darkgray; 
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
     }
 
     .nav-list.active {
         display: flex; 
+        max-height: 500px;
     }
 
     .menu-toggle {
         display: flex; 
     }
+
+    .search-container {
+         width: 100%; /* 幅を100%に設定 */
+        padding: 10px; /* 上下のパディングを追加 */
+        display: flex; /* 横並びにするためのフレックスボックス */
+    }
+
+
+    .search-container input[type="text"] {
+        flex: 1;
+        width: 70%; 
+        padding: 5px; /* 内側のパディング */
+    border: none;
+    }
+
+    .search-container button {
+        padding: 5px 10px; 
+        background-color: #555; 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+    }
+
+    .search-container button:hover {
+        background-color: #777; 
+    }
+
+    .content.expanded {
+        margin-top: 300px;
+    }
 }
-        
+
         .swiper {
             width: 100%;
             height: 500px; 
@@ -183,12 +237,13 @@
         }
         .image-container {
             display: flex;
-             
-           
+            flex-direction: row; 
+            align-items: center;
             margin-left: 260px;
             height: 300px; 
-            
-            width: 2000px; 
+            flex-direction: row; 
+            width: 100%; 
+            overflow: hidden;
         }
 
         img {
@@ -198,12 +253,43 @@
             
             margin-top: 20px;
         }
-        
-        .text {
-            margin-left: 80px;
-           margin-top: 60px;
-        }
 
+        .text {
+            margin-left: 80px; /* PC用のマージン */
+            margin-top: 20px; /* 上マージンを調整 */
+            
+        }
+        @media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* スマホ表示時に縦並びにする場合 */
+        margin-left: 0; /* 左マージンをゼロに */
+        margin-right: 0; /* 右マージンをゼロに */
+        align-items: center;
+    } 
+        
+     img {
+                width: 90%; /* 幅を90%に設定 */
+                height: auto; /* アスペクト比を保持 */
+                max-width: 400px; /* 最大幅を設定 */
+                margin: 0;
+            }
+
+            .narrow {
+                width: 70%; /* 幅を70%に設定 */
+                max-width: 250px; /* 最大幅を設定 */
+            }
+
+            .text {
+                margin-left: 0; /* 左マージンをゼロに */
+                margin-top: 10px; /* 上マージンを調整 */
+                width: 90%; /* 幅を90%に設定 */
+                font-size: 10px;
+                /* テキストを中央揃え */
+                padding: 0 10px; /* サイドにパディングを追加 */
+                overflow-wrap: break-word;
+                line-height: 1.5;
+            } 
+    }
         .image-container2 {
             display: flex;
            
@@ -241,6 +327,25 @@
     width: auto; 
 }
 
+.image {
+    width: 100%; /* 画像がコンテナの幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* スマホでは縦並びにする */
+        align-items: center; /* 中央揃え */
+        width: 90%; /* 幅を調整 */
+        margin: 20px auto; /* 中央寄せとマージン */
+    }
+
+    .image {
+        order: 1; /* 画像をボックスの下に移動 */
+        margin-top: 20px; /* ボックスと画像の間にスペースを追加 */
+    }
+}
+
         h6 {
             font-size: 20px; 
             
@@ -276,6 +381,12 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    .image-container4 {
+        display: none;
+    }
+}
+
 </style>
 
 
@@ -294,19 +405,27 @@
                 <li><a href="#">Food</a></li>
                 <li><a href="#">Drink</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search-container">
+                <li class="search-container">
             <input type="text" placeholder="Search..." aria-label="Search">
             <button type="submit">Search</button>
+        </li>
+    </ul>
+</nav>
+        
         </div>
     </header>
 
     <script>
         document.getElementById('mobile-menu').addEventListener('click', function() {
             const navList = document.getElementById('nav-list');
+            const content = document.querySelector('.content');
             navList.classList.toggle('active'); 
-        });
+            if (navList.classList.contains('active')) {
+        content.classList.add('expanded'); // プルダウンが開いたときにマージンを追加
+    } else {
+        content.classList.remove('expanded'); // プルダウンが閉じたときにマージンを元に戻す
+    }
+});
     </script>
 
    
@@ -327,31 +446,51 @@
 
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      
-        const swiper = new Swiper('.swiper', {
-            slidesPerView: 2, 
-            spaceBetween: 0, 
-            speed: 600,
-            autoplay: {
-                delay: 3000, 
-                disableOnInteraction: false, 
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            loop: true, 
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: false, 
-            },
-        });
-    </script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 2, // Default to 2 slides
+        spaceBetween: 0, 
+        speed: 600,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false, 
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true, 
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false, 
+        },
+        breakpoints: {
+            // When window width is <= 768px
+            768: {
+                slidesPerView: 1, // Show 1 slide on mobile
+            }
+        }
+    });
+    const updateSwiper = () => {
+    if (window.innerWidth < 768) {
+        swiper.params.slidesPerView = 1;
+    } else {
+        swiper.params.slidesPerView = 2;
+    }
+    swiper.update();
+};
+
+window.addEventListener('resize', updateSwiper);
+updateSwiper(); // 初回実行
+</script>
+ 
+
+
+</script>
 
 <h2>新型コロナウイルスに対する取り組みの最新情報をご案内</h2>
 <div class="toggleBox" id="box1">■衛生面に関して</div>
@@ -446,13 +585,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="container fade-in">
         <div class="text2">
             <h6>Address</h6>
-            <br>
             <p>681 xxx Drive, xxxx xxxx #01 - 06 000000<br>
-               Opening Hours </p>
-               <br>
-            <h7>Mondays - Friday: 10am - 9pm</h7><br>
-            <br>
-            <p>Saturdays,Sundays & Public Holidays: 9am - 9pm</p>
+               Opening Hours</p>
+            <h7>Mondays - Friday: 10am - 9pm</h7>
+            <p>Saturdays, Sundays & Public Holidays: 9am - 9pm</p>
         </div>
         <img src="barista.jpg" alt="説明文" class="image">
     </div>
