@@ -95,9 +95,9 @@
     display: none; 
     flex-direction: column;
     cursor: pointer;
-    position: absolute; /* 絶対配置 */
-    right: 20px; /* 右端からの距離 */
-    top: 20px; /* ヘッダーの上端からの距離 */
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
 }
 
 .menu-toggle .bar {
@@ -143,16 +143,16 @@
     }
 
     .search-container {
-         width: 100%; /* 幅を100%に設定 */
-        padding: 10px; /* 上下のパディングを追加 */
-        display: flex; /* 横並びにするためのフレックスボックス */
+         width: 100%; 
+        padding: 10px; 
+        display: flex; 
     }
 
 
     .search-container input[type="text"] {
         flex: 1;
         width: 70%; 
-        padding: 5px; /* 内側のパディング */
+        padding: 5px;
     border: none;
     }
 
@@ -255,37 +255,36 @@
         }
 
         .text {
-            margin-left: 80px; /* PC用のマージン */
-            margin-top: 20px; /* 上マージンを調整 */
+            margin-left: 80px; 
+            margin-top: 20px; 
             
         }
         @media (max-width: 768px) {
     .image-container {
-        flex-direction: column; /* スマホ表示時に縦並びにする場合 */
-        margin-left: 0; /* 左マージンをゼロに */
-        margin-right: 0; /* 右マージンをゼロに */
+        flex-direction: column; 
+        margin-left: 0; 
+        margin-right: 0; 
         align-items: center;
     } 
         
      img {
-                width: 90%; /* 幅を90%に設定 */
-                height: auto; /* アスペクト比を保持 */
-                max-width: 400px; /* 最大幅を設定 */
+                width: 90%; 
+                height: auto; 
+                max-width: 400px; 
                 margin: 0;
             }
 
             .narrow {
-                width: 70%; /* 幅を70%に設定 */
-                max-width: 250px; /* 最大幅を設定 */
+                width: 70%;
+                max-width: 250px;
             }
 
             .text {
-                margin-left: 0; /* 左マージンをゼロに */
-                margin-top: 10px; /* 上マージンを調整 */
-                width: 90%; /* 幅を90%に設定 */
+                margin-left: 0; 
+                margin-top: 10px; 
+                width: 90%; 
                 font-size: 10px;
-                /* テキストを中央揃え */
-                padding: 0 10px; /* サイドにパディングを追加 */
+                padding: 0 10px; 
                 overflow-wrap: break-word;
                 line-height: 1.5;
             } 
@@ -328,21 +327,21 @@
 }
 
 .image {
-    width: 100%; /* 画像がコンテナの幅に合わせる */
-    height: auto; /* アスペクト比を維持 */
+    width: 100%; 
+    height: auto; 
 }
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* スマホでは縦並びにする */
-        align-items: center; /* 中央揃え */
-        width: 90%; /* 幅を調整 */
-        margin: 20px auto; /* 中央寄せとマージン */
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%; 
+        margin: 20px auto; 
     }
 
     .image {
-        order: 1; /* 画像をボックスの下に移動 */
-        margin-top: 20px; /* ボックスと画像の間にスペースを追加 */
+        order: 1; 
+        margin-top: 20px; 
     }
 }
 
@@ -421,9 +420,9 @@
             const content = document.querySelector('.content');
             navList.classList.toggle('active'); 
             if (navList.classList.contains('active')) {
-        content.classList.add('expanded'); // プルダウンが開いたときにマージンを追加
+        content.classList.add('expanded'); 
     } else {
-        content.classList.remove('expanded'); // プルダウンが閉じたときにマージンを元に戻す
+        content.classList.remove('expanded');
     }
 });
     </script>
@@ -448,7 +447,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper', {
-        slidesPerView: 2, // Default to 2 slides
+        slidesPerView: 2, 
         spaceBetween: 0, 
         speed: 600,
         autoplay: {
@@ -469,9 +468,9 @@
             hide: false, 
         },
         breakpoints: {
-            // When window width is <= 768px
+            
             768: {
-                slidesPerView: 1, // Show 1 slide on mobile
+                slidesPerView: 1, 
             }
         }
     });
@@ -485,7 +484,7 @@
 };
 
 window.addEventListener('resize', updateSwiper);
-updateSwiper(); // 初回実行
+updateSwiper(); 
 </script>
  
 

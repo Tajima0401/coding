@@ -56,9 +56,9 @@ h1 {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 40px; /* スマホ表示時のフォントサイズ */
-        text-align: left; /* スマホ表示時は左揃え */
-        margin-left: 20px; /* 左マージンを追加 */
+        font-size: 40px; 
+        text-align: left; 
+        margin-left: 20px; 
 		font-weight: bold;
     }
 }
@@ -104,11 +104,11 @@ p {
 
 	@media (max-width: 768px) {
 		.toggleBox {
-			width: 90%; /* スマホ表示の幅 */
+			width: 90%;
 			margin-left: auto;
-			margin-right: auto; /* 左右のマージンを自動にして中央に配置 */
-			padding-left: 15px; /* 左側のパディングを調整 */
-			padding-right: 15px; /* 右側のパディングを調整 */
+			margin-right: auto; 
+			padding-left: 15px; 
+			padding-right: 15px; 
 		}
 	}
 
@@ -130,10 +130,10 @@ p {
 
 	@media (max-width: 768px) {
 		.hiddenText {
-			margin-left: auto; /* 左のマージンを自動に */
-			margin-right: auto; /* 右のマージンを自動に */
-			text-align: left; /* テキストを中央に */
-			width: 90%; /* 幅を90%に */
+			margin-left: auto; 
+			margin-right: auto; 
+			text-align: left; 
+			width: 90%; 
 			white-space: normal;
 		}
 	}
@@ -149,9 +149,9 @@ p {
 
 	@media (max-width: 768px) {
 		h3 {
-			margin-right: 0; /* スマホ表示時に右マージンをゼロに */
-			margin-left: 0; /* スマホ表示時に左マージンをゼロに */
-			width: 100%; /* 幅を100%にする */
+			margin-right: 0; 
+			margin-left: 0;
+			width: 100%; 
 		}
 	}
 
@@ -167,9 +167,9 @@ p {
 
 	@media (max-width: 768px) {
 		h4 {
-			margin-right: 0; /* スマホ表示時に右マージンをゼロに */
-			margin-left: 0; /* スマホ表示時に左マージンをゼロに */
-			width: 100%; /* 幅を100%にする */
+			margin-right: 0;
+			margin-left: 0; 
+			width: 100%;
 		}
 	}
 
@@ -200,7 +200,7 @@ p {
 	@media (max-width: 768px) {
 		.custom-heading,
 		.image-container4 {
-			display: none; /* スマホ表示時に非表示にする */
+			display: none; 
 		}
 	}
 
@@ -217,12 +217,12 @@ p {
 	.footer-links {
 		list-style-type: none; 
 		padding: 0; 
-		text-align: center; /* 中央揃え */
+		text-align: center; 
 		margin: 0;
-		display: flex; /* フレックスボックスを使用 */
-		justify-content: center; /* 中央揃え */
-		white-space: nowrap; /* 改行を防ぐ */
-		overflow-x: auto; /* 水平方向にオーバーフローをスクロール可能に */
+		display: flex; 
+		justify-content: center; 
+		white-space: nowrap; 
+		overflow-x: auto; 
 	}
 	
 	.footer-links li {
@@ -241,16 +241,16 @@ p {
 		color: white; 
 	}
 	
-	/* スマホ表示向けのスタイル */
+
 	@media (max-width: 768px) {
 		.footer {
 			padding: 10px;
 			}
 		.footer-links {
-			justify-content: center; /* 中央に揃える */
+			justify-content: center; 
 		}
 		.footer-links a {
-			font-size: 12px; /* スマホ用の小さいフォントサイズ */
+			font-size: 12px; 
 		}
 
 		.footer-links li {
